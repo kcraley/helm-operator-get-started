@@ -1,0 +1,14 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: linkerd-dev
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: linkerd-dev
+  chart:
+    repository: https://helm.linkerd.io/stable
+    name: linkerd
+    version: 2.6.1
