@@ -10,5 +10,5 @@ spec:
   releaseName: linkerd-dev
   chart:
     repository: https://helm.linkerd.io/stable
-    name: linkerd
+    name: linkerd2
     version: 2.6.1
