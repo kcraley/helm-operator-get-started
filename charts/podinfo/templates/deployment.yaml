@@ -21,6 +21,9 @@ spec:
       annotations:
         prometheus.io/scrape: 'true'
     spec:
+      {{- if .Values.serviceAccount.enabled -}}
+      serviceAccountName: {{ .Release.Name }}-sa
+      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image }}"

@@ -11,6 +11,9 @@ service:
   containerPort: 9898
   nodePort: 31198
 
+serviceAccount:
+  enabled: true
+
 hpa:
   enabled: false
   maxReplicas: 10
